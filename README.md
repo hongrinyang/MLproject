@@ -13,3 +13,4 @@
 3. 구동 원리 및 메커니즘
  우선 꼭 https://drive.google.com/file/d/1WaB5AFiYWHsC0mXJcGiIGBfxLnGurCk-/view?usp=drive_link의 링크에서 DGS10.csv파일을 다운로드받으시길 바랍니다. 그리고 다운로드 받으신 파일의 경로를, 코드에 기입해주시면 됩니다. 
  
+ 우선 데이터를 로드하고 전처리하는 과정이 필요합니다. load_and_preprocess_data 함수는 주어진 CSV 파일을 로드하고, 날짜 열(observation_date)을 날짜 형식으로 변환한 후, 이 날짜를 인덱스로 설정합니다. 이후, 결측값을 제거하고, **연도(year)**와 월(month) 특성을 추가합니다. 이렇게 생성된 데이터는 이후 회귀 모델의 **특성 변수(X)**와 **타겟 변수(y)**로 나뉩니다.(특성 변수 (X): year, month, DGS10 (10년물 국채 금리), 타겟 변수 (y): DGS10 (국채 금리 예측))
